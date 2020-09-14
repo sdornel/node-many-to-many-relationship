@@ -14,6 +14,24 @@ module.exports = {
       lyrics: {
         type: Sequelize.STRING
       },
+      artistId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Artists',
+          key: 'id',
+          as: 'artistId',
+        }
+      },
+      genreId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Genres',
+          key: 'id',
+          as: 'genreId',
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
