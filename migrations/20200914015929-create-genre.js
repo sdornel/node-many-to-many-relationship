@@ -11,24 +11,6 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      // songId: {
-      //   type: Sequelize.INTEGER,
-      //   onDelete: 'CASCADE',
-      //   references: {
-      //     model: 'Songs',
-      //     key: 'id',
-      //     as: 'songId',
-      //   }
-      // },
-      // artistId: {
-      //   type: Sequelize.INTEGER, 
-      //   onDelete: 'CASCADE',
-      //   references: {
-      //     model: 'Artists',
-      //     key: 'id',
-      //     as: 'artistId',
-      //   }
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
