@@ -5,12 +5,16 @@ module.exports = {
    return queryInterface.bulkInsert('Songs', [{
     title: 'example song',
     lyrics: 'long string here',
+    artistId: 1,
+    genreId: 1,
     createdAt: new Date(),
     updatedAt: new Date()
   },
   {
     title: 'another song',
     lyrics: 'another long string',
+    artistId: 2,
+    genreId: 2,
     createdAt: new Date(),
     updatedAt: new Date()
   }], {});
@@ -19,3 +23,10 @@ module.exports = {
     return queryInterface.bulkDelete('Songs', null, {});
   }
 };
+
+
+
+
+
+
+
