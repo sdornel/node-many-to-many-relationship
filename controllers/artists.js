@@ -15,7 +15,7 @@ const getAllArtists = async (req, res) => {
         const artists = await Artist.findAll({
             include: [
                 {
-                    model: Review
+                    model: Song
                 }
             ]
         });
@@ -31,7 +31,7 @@ const getArtistById = async (req, res) => {
             where: { id: id },
             include: [
                 {
-                    model: Genre
+                    model: Song
                 }
             ]
         });

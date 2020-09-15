@@ -12,7 +12,13 @@ const createGenre = async (req, res) => {
 }
 const getAllGenres = async (req, res) => {
     try {
-        const genres = await Genre.findAll();
+        const genres = await Genre.findAll({
+            include: [
+                {
+                    model: Song
+                }
+            ]
+        });
         return res.status(200).json({ genres });
     } catch (error) {
         return res.status(500).send(error.message);
@@ -22,7 +28,12 @@ const getGenreById = async (req, res) => {
     try {
         const { id } = req.params;
         const genre = await Genre.findOne({
-            where: { id: id }
+            where: { id: id },
+            include: [
+                {
+                    model: Song
+                }
+            ]
         });
         if (genre) {
             return res.status(200).json({ genre });
