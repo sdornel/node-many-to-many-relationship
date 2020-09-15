@@ -1,4 +1,4 @@
-const Artist = require('../models/artist')
+const { Artist, Song } = require('../models');
 
 const createArtist = async (req, res) => {
     try {

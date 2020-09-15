@@ -1,4 +1,4 @@
-const Genre = require('../models/genre')
+const { Genre, Song } = require('../models');
 
 const createGenre = async (req, res) => {
     try {
