@@ -10,7 +10,7 @@ module.exports = {
   },
   {
     name: 'Frank Sinatra',
-    lyrics: 'another biography',
+    bio: 'another biography',
     createdAt: new Date(),
     updatedAt: new Date()
   }], {});
